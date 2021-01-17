@@ -9,7 +9,7 @@ export default function Home({employees}) {
   )
 }
 
-export const getStaticProps = async() => {
+export const getServerSideProps = async() => {
   const res = await fetch(`${process.env.BASE_URL}/api/team`);
   if (res.status !== 200) {
     return {
